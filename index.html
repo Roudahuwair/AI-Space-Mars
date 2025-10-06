@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI • Space & Mars</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand">AI for Space & Mars</div>
+    <nav class="links">
+      <a href="#why">Why</a>
+      <a href="#demos">Demos</a>
+      <a href="#faq">FAQ</a>
+      <a href="#resources">Resources</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Accelerating research and development for space and Mars with AI</h1>
+    <p>Autonomy, faster science, safer operations, and smarter planning.</p>
+    <div class="cta">
+      <a class="btn" href="#demos">Explore demos</a>
+      <button id="downloadBrief" class="btn ghost">Download brief</button>
+    </div>
+  </section>
+
+  <section id="why" class="section">
+    <h2>Why it matters</h2>
+    <div class="grid">
+      <div class="card"><div class="icon">🤖</div><h3>Autonomous ops</h3><p>Onboard perception and decision-making when comms are delayed.</p></div>
+      <div class="card"><div class="icon">🛰️</div><h3>Navigation & hazard</h3><p>Terrain understanding, landing safety, and route planning.</p></div>
+      <div class="card"><div class="icon">🔬</div><h3>Science discovery</h3><p>Rapid triage of images, spectra, and anomalies.</p></div>
+      <div class="card"><div class="icon">🧠</div><h3>System health</h3><p>Predictive maintenance for power, thermal, and mobility.</p></div>
+      <div class="card"><div class="icon">📅</div><h3>Mission planning</h3><p>Resource-aware schedules and risk-aware trade-offs.</p></div>
+      <div class="card"><div class="icon">🚀</div><h3>Faster iteration</h3><p>Design, simulation, and testing loops at higher speed.</p></div>
+    </div>
+  </section>
+
+  <section id="demos" class="section alt">
+    <h2>Interactive demos</h2>
+    <div class="try-wrap">
+      <div class="try-box">
+        <h3>Earth–Mars signal delay</h3>
+        <div class="grid2">
+          <div>
+            <label>Distance (million km)</label>
+            <input id="dist" type="range" min="50" max="410" step="1" value="225"/>
+            <div id="distVal">225</div>
+          </div>
+          <div>
+            <label>Presets</label>
+            <div class="chips">
+              <button class="chip" data-d="55">Opposition</button>
+              <button class="chip" data-d="225">Average</button>
+              <button class="chip" data-d="401">Conjunction</button>
+            </div>
+          </div>
+        </div>
+        <div class="meter"><div id="delayBar" class="bar"></div></div>
+        <div class="results">
+          <div><b>One-way:</b> <span id="oneWay">0 s</span></div>
+          <div><b>Round-trip:</b> <span id="roundTrip">0 s</span></div>
+        </div>
+      </div>
+
+      <div class="try-box">
+        <h3>Rover energy & data planner</h3>
+        <div class="grid2">
+          <div>
+            <label>Solar hours/day</label>
+            <input id="solar" type="range" min="0" max="12" step="1" value="6"/>
+            <div id="solarVal">6</div>
+          </div>
+          <div>
+            <label>Panel power (W)</label>
+            <input id="panel" type="range" min="200" max="1500" step="10" value="800"/>
+            <div id="panelVal">800</div>
+          </div>
+          <div>
+            <label>Base load (W)</label>
+            <input id="base" type="range" min="100" max="300" step="5" value="150"/>
+            <div id="baseVal">150</div>
+          </div>
+          <div>
+            <label>Images/day</label>
+            <input id="cams" type="range" min="0" max="50" step="1" value="10"/>
+            <div id="camsVal">10</div>
+          </div>
+          <div>
+            <label>Science ops/day</label>
+            <input id="sci" type="range" min="0" max="20" step="1" value="4"/>
+            <div id="sciVal">4</div>
+          </div>
+        </div>
+        <div class="results">
+          <div><b>Energy balance:</b> <span id="energyRes">0 Wh</span></div>
+          <div><b>Data need:</b> <span id="dataRes">0 MB/day</span></div>
+          <div class="hint" id="planHint"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section">
+    <h2>FAQ</h2>
+    <div class="accordion">
+      <details><summary>Why autonomy is critical on Mars?</summary><p>Average round-trip delay can reach tens of minutes, so local decision-making is required.</p></details>
+      <details><summary>What data does AI help analyze?</summary><p>Imagery, spectra, telemetry, weather, terrain meshes, and simulation outputs.</p></details>
+      <details><summary>Where to start building skills?</summary><p>Python, data analysis, control, computer vision, and embedded systems.</p></details>
+    </div>
+  </section>
+
+  <section id="resources" class="section">
+    <h2>Resources</h2>
+    <ul class="links">
+      <li><a target="_blank" rel="noopener" href="https://mars.nasa.gov/">NASA Mars</a></li>
+      <li><a target="_blank" rel="noopener" href="https://smd-prod.s3.amazonaws.com/science-pink/s3fs-public/atoms/files/AI_HEOMD_SMD.pdf">NASA AI overview</a></li>
+      <li><a target="_blank" rel="noopener" href="https://www.esa.int/">ESA</a></li>
+      <li><a target="_blank" rel="noopener" href="https://openmct.js.org/">Open MCT</a></li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <div>© 2025 AI • Space & Mars</div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
